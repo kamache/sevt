@@ -3,12 +3,12 @@
 FROM golang:alpine
 
 # Copy the local package files to the container's workspace.
-ADD . /go/src/github.com/dhhenderson/sevt
+ADD . /go/src/github.com/kamache/sevt
 
 # Build inside the container.
 # (You may fetch or manage dependencies here,
 # either manually or with a tool like "godep".)
-RUN go install github.com/dhhenderson/sevt
+RUN go install github.com/kamache/sevt
 
 # Run the command by default when the container starts.
 ENTRYPOINT /go/bin/sevt
